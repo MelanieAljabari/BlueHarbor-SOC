@@ -1,0 +1,4 @@
+pcaps/*.pcap
+logs/*
+!logs/auth-practice.log
+*.tmp

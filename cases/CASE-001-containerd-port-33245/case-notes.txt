@@ -1,0 +1,101 @@
+CASE-001: Investigation of Local TCP Port 33245
+Date: August 14, 2026
+Analyst: Melanie Aljabari
+
+SUMMARY
+During baseline network inspection of the Linux SOC lab, a TCP service was identified listening on port 33245. The service was investigated to determine the owning process, network exposure, and whether the activity appeared expected or suspicious.
+
+INITIAL FINDING
+A default Nmap scan of localhost found no open ports among the 1,000 commonly scanned TCP ports.
+
+Command:
+nmap localhost
+
+A local socket inspection later identified TCP port 33245 listening on the loopback address.
+
+Command:
+ss -tuln
+
+Finding:
+127.0.0.1:33245 - LISTEN
+
+INVESTIGATION
+
+1. Process Identification
+The listening socket was investigated with process information enabled.
+
+Command:
+sudo ss -tulnp
+
+Result:
+Port 33245 was owned by the containerd process.
+
+2. Process Verification
+The process was reviewed using its PID.
+
+Command:
+ps -fp 140
+
+Result:
+The process was confirmed as /usr/bin/containerd and was running as root.
+
+3. Full TCP Port Scan
+A scan of all TCP ports was performed.
+
+Command:
+nmap -p- localhost
+
+Result:
+33245/tcp open
+All other scanned TCP ports were closed.
+
+4. Service Detection
+Nmap service/version detection was performed against port 33245.
+
+Command:
+nmap -sV -p 33245 localhost
+
+Result:
+The port was confirmed open, but Nmap could not identify the service by name. The service returned HTTP-style responses.
+
+5. HTTP Test
+The service was queried directly with curl.
+
+Command:
+curl -i --max-time 5 http://127.0.0.1:33245/
+
+Result:
+HTTP/1.1 404 Not Found
+Content-Type: text/plain
+
+The response confirmed that an HTTP-capable service was responding on the port.
+
+6. Service Status
+The containerd service was reviewed using systemctl.
+
+Command:
+sudo systemctl status containerd --no-pager
+
+Result:
+containerd.service was loaded, enabled, and active (running).
+Main PID: 140
+No service failures or suspicious error messages were observed.
+
+ANALYSIS
+Port 33245 was bound to 127.0.0.1, meaning the service was accessible only from the local Linux environment and was not listening on all network interfaces. Multiple tools independently confirmed that containerd owned the listening socket.
+
+CONCLUSION
+The activity appears consistent with an expected containerd service in the Linux environment. No evidence of malicious or unauthorized activity was identified during this investigation.
+
+DISPOSITION
+Closed - Expected system activity.
+
+SKILLS PRACTICED
+Nmap
+Linux socket analysis
+Process investigation
+Service identification
+HTTP response analysis
+Systemd service review
+Evidence correlation
+SOC investigation documentation
