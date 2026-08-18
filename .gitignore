@@ -2,3 +2,19 @@ pcaps/*.pcap
 logs/*
 !logs/auth-practice.log
 *.tmp
+
+# Secrets and local environment
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+*.token
+.aws/
+.ssh/
+__pycache__/
+.venv/
+venv/
