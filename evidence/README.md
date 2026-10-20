@@ -51,6 +51,6 @@ When matching events are found, the script generates an alert and displays the r
 
 ### Technical Evidence
 
-![Failed Authentication Detection Script](soc-failed-auth-detection.png.png)
 
+![Failed Authentication Detection Script](soc-failed-auth-detection.png)
 
