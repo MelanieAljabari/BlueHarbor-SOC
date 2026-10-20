@@ -90,3 +90,11 @@ The environment includes:
 ### Technical Evidence
 
 ![BlueHarbor SOC Lab Environment](soc-lab-environment.png)
+
+---
+
+## SOC Detection Scripts & Technical Evidence
+
+Explore the technical evidence from my Debian Linux SOC home lab, including Bash detection scripts, authentication log monitoring, and brute-force detection logic.
+
+📁 **[View SOC Technical Evidence and Screenshots](evidence/README.md)**
