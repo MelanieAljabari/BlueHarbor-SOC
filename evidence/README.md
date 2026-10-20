@@ -35,4 +35,22 @@ It also generates a timestamped report for analyst review.
 
 ![BlueHarbor SOC Detection Runner](soc-detection-runner.png)
 
+---
+
+## Failed Authentication Detection | Linux Security Monitoring
+
+This screenshot documents a Bash detection script developed for my Debian Linux SOC home lab.
+
+The script uses `journalctl` to examine Linux system logs for authentication-related events, including:
+
+- Failed password attempts
+- Authentication failures
+- Invalid usernames
+
+When matching events are found, the script generates an alert and displays the relevant log entries for analyst review.
+
+### Technical Evidence
+
+![Failed Authentication Detection Script](soc-failed-auth-detection.png)
+
 
