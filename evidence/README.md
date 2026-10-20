@@ -54,3 +54,20 @@ When matching events are found, the script generates an alert and displays the r
 
 ![Failed Authentication Detection Script](soc-failed-auth-detection.png)
 
+---
+
+## BlueHarbor SOC Lab Environment
+
+This screenshot shows the Debian Linux environment used to build and operate my BlueHarbor SOC home lab.
+
+The lab includes:
+- Bash security detection scripts
+- Linux security logs
+- Network monitoring tools
+- Incident investigation documentation
+- Automated security reporting
+
+### Technical Evidence
+
+![BlueHarbor SOC Lab Environment](SOC-lab-environment.png.png)
+
