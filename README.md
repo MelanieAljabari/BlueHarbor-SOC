@@ -67,6 +67,10 @@ Created a script that identifies:
 
 CASE-001 documents the investigation of an unknown listening TCP port. The process was identified, verified, tested, and documented before being classified as expected activity.
 
+📁 **View Full Investigation:** [CASE-001 | Containerd Port 33245 Investigation](cases/CASE-001-containerd-port-33245/case-notes.txt)
+
 ## Purpose
 
 This lab is designed to develop hands-on investigation, detection, documentation, and troubleshooting skills applicable to entry-level SOC and cybersecurity analyst roles.
+
+
