@@ -17,3 +17,20 @@ The evidence includes:
 These screenshots provide supporting evidence of practical Linux security monitoring, detection engineering, and SOC investigation workflows.
 
 All activities were performed in a controlled home lab environment for cybersecurity training and skill development.
+
+---
+
+## SOC Detection Runner | Bash Automation
+
+This screenshot shows the Bash detection runner used in my Debian Linux SOC home lab.
+
+The script coordinates three security checks:
+- Failed authentication detection
+- Brute-force login detection
+- New listening-port detection
+
+It also generates a timestamped report for analyst review.
+
+### Technical Evidence
+
+![BlueHarbor SOC Detection Runner](soc-detection-runner.png)
