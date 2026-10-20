@@ -73,4 +73,20 @@ CASE-001 documents the investigation of an unknown listening TCP port. The proce
 
 This lab is designed to develop hands-on investigation, detection, documentation, and troubleshooting skills applicable to entry-level SOC and cybersecurity analyst roles.
 
+---
 
+## BlueHarbor SOC Lab Environment
+
+This screenshot provides an overview of my Debian Linux SOC home lab, including the files and directories used for security monitoring and investigations.
+
+The environment includes:
+
+- Bash security detection scripts
+- Linux security logs
+- Network packet captures (PCAP)
+- Investigation documentation
+- Automated detection reporting
+
+### Technical Evidence
+
+![BlueHarbor SOC Lab Environment](soc-lab-environment.png)
