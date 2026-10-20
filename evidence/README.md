@@ -34,3 +34,5 @@ It also generates a timestamped report for analyst review.
 ### Technical Evidence
 
 ![BlueHarbor SOC Detection Runner](soc-detection-runner.png)
+
+
