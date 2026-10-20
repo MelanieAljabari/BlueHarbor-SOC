@@ -71,3 +71,20 @@ The lab includes:
 
 ![BlueHarbor SOC Lab Environment](SOC-lab-environment.png.png)
 
+---
+
+## Brute-Force Detection | Linux Security Monitoring
+
+This screenshot documents a Bash detection script developed for my Debian Linux SOC home lab.
+
+The script analyzes authentication logs to identify repeated failed login attempts from the same source IP address.
+
+The detection logic includes:
+- Authentication log analysis
+- Source IP identification
+- Failed login attempt counting
+- Alert generation when five or more failed attempts are detected
+
+### Technical Evidence
+
+![Brute-Force Detection Script](soc-brute-force-detection.png)
